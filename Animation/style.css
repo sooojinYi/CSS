@@ -1,0 +1,81 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+body {
+    font-family: 'Mulish', sans-serif;
+}
+
+.loading{
+    display: column;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 216px;
+    padding: 80px 100px;
+}
+
+.loading-title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.333333333333333;
+    color: #151B26;
+    animation-name: title;
+    animation-duration: 1600ms;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    margin-bottom: 20px;
+
+}
+
+.progress-bar {
+    position: relative;
+    width: 300px;
+    height: 12px;
+    border-radius: 100px;
+    background-color: #E5EAEF;
+    overflow: hidden;
+}
+
+.progress-bar-gauge {
+    position: absolute;
+     width: 0;
+     height: 12px;
+     background-color: #13CE66;
+     border-radius: 100px;
+     animation-name: move;
+     animation-duration: 1600ms;
+     animation-timing-function: ease-in-out;
+     animation-iteration-count: infinite;
+     animation-timing-function: ease-out;
+}
+
+@keyframes move {
+    0% {
+        width: 0;
+        opacity: 1;
+    }
+
+    80% {
+        width: 100%;
+        opacity: 1;
+    }
+
+    100% {
+        width: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes title {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
